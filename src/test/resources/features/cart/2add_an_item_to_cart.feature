@@ -1,3 +1,4 @@
+@cart
 Feature: Add an item to cart
 
   Background:
@@ -7,4 +8,4 @@ Feature: Add an item to cart
     When the user added two product with ids as 4643 and 4646
     Then the status code should be 201
     And the response item id can not be null or empty
-    And the response created must be true
+    And the response item created must be true

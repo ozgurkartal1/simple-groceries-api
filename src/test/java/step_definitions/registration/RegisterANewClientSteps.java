@@ -23,7 +23,7 @@ public class RegisterANewClientSteps extends BaseStep {
         response = APIUtils.sendPostRequest(request, REGISTRATION_ENDPOINT, user);
         AccessToken accessToken = response.as(AccessToken.class);
 
-        TestDataWriter.dataWriter("acces_token.json", accessToken);
+        TestDataWriter.dataWriter("access_token.json", accessToken);
     }
 
 
@@ -45,4 +45,5 @@ public class RegisterANewClientSteps extends BaseStep {
         user = new User(userMap.get("clientName"), userMap.get("clientEmail"));
         response = APIUtils.sendPostRequest(request, REGISTRATION_ENDPOINT, user);
     }
+
 }

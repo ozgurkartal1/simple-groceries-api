@@ -6,7 +6,7 @@ Feature: Register a new client
 
   Scenario: Test register method functionality with valid credentials
 
-    When the user sends POST request to registeration endpoint with valid "Ozgur" and "ozgurkartal4535435@gmail.com"
+    When the user sends POST request to registeration endpoint with valid "Ozgur" and "ozgurkartal45354351@gmail.com"
     Then the status code should be 201
     And the access token can not be null or empty
 

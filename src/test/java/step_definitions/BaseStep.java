@@ -16,6 +16,7 @@ public abstract class BaseStep {
 
     protected final String CART_ENDPOINT;
     protected final String ITEM_ENDPOINT;
+    protected final String ORDER_ENDPOINT;
 
     protected BaseStep() {
         RestAssured.baseURI = ConfigManager.getProperty("BaseURI");
@@ -23,5 +24,6 @@ public abstract class BaseStep {
         PRODUCTS_ENDPOINT = ConfigManager.getProperty("api.products.endpoint");
         CART_ENDPOINT = ConfigManager.getProperty("api.cart.endpoint");
         ITEM_ENDPOINT = ConfigManager.getProperty("api.item.endpoint");
+        ORDER_ENDPOINT = ConfigManager.getProperty("api.order.endpoint");
     }
 }
