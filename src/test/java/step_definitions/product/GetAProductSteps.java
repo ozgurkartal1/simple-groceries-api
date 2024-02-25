@@ -1,13 +1,14 @@
-package step_definitions;
+package step_definitions.product;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.assertj.core.api.SoftAssertions;
 import pojo.response.products.Product;
+import step_definitions.BaseStep;
 import utils.APIUtils;
 import utils.TestDataReader;
 
-public class GetAProductSteps extends BaseStep{
+public class GetAProductSteps extends BaseStep {
 
     Product product;
 

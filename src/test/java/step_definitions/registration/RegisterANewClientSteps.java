@@ -1,10 +1,11 @@
-package step_definitions;
+package step_definitions.registration;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import io.restassured.common.mapper.TypeRef;
 import org.assertj.core.api.Assertions;
+import step_definitions.BaseStep;
 import utils.APIUtils;
 import pojo.request.user.User;
 import pojo.response.token.AccessToken;
