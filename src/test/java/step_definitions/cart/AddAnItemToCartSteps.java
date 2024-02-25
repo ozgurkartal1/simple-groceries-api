@@ -46,7 +46,7 @@ public class AddAnItemToCartSteps extends BaseStep {
         }
     }
 
-    @And("the response created must be true")
+    @And("the response item created must be true")
     public void theResponseCreatedMustBeTrue() {
         for (Response response1:responses){
             Assertions.assertThat(response1.jsonPath().getBoolean("created")).isTrue();

@@ -37,4 +37,11 @@ public class APIUtils {
                 .queryParam(key, value)
                 .get(endpoint);
     }
+
+    public static Response sendDeleteRequest(RequestSpecification request, String endpoint) {
+        return request
+                .when()
+                .log().all()
+                .delete(endpoint);
+    }
 }

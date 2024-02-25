@@ -1,3 +1,4 @@
+@cart
 Feature: Get a cart
 
   Background:
@@ -6,7 +7,10 @@ Feature: Get a cart
     Scenario: Test get a cart method functionality
       When the user wants to get a cart
       Then the status code should be 200
-      And the response ids must match with specified item ids
+      And the response information must match with following cart details:
+        | productId | quantity |
+        | 4643      | 1        |
+        | 4646      | 1        |
 
   Scenario: Test get a cart method functionality with invalid endpoint
     When the user wants to get a cart with wrong endpoint as "/cart"

@@ -5,6 +5,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import org.assertj.core.api.Assertions;
+import pojo.response.token.AccessToken;
+import utils.TestDataReader;
 
 public class CommonSteps extends BaseStep{
 
@@ -21,5 +23,11 @@ public class CommonSteps extends BaseStep{
     @And("the error message {string} should be displayed")
     public void theErrorMessageShouldBeDisplayed(String errorMessage) {
         Assertions.assertThat(response.jsonPath().getString("error")).isEqualTo(errorMessage);
+    }
+
+    @And("the user makes authontication with access token")
+    public void theUserMakesAuthonticationWithAccessToken() {
+        String accessToken = TestDataReader.dataReader("access_token.json", AccessToken.class).getAccessToken();
+        request = request.header("Authorization", "Bearer " + accessToken);
     }
 }
