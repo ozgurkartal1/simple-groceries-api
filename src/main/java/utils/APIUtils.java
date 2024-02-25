@@ -16,6 +16,13 @@ public class APIUtils {
                 .post(endpoint);
     }
 
+    public static Response sendPostRequest(RequestSpecification request, String endpoint){
+        return request
+                .when()
+                .log().all()
+                .post(endpoint);
+    }
+
     public static Response sendGetRequest(RequestSpecification request, String endpoint) {
         return request
                 .when()

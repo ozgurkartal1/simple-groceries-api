@@ -1,16 +1,17 @@
-package step_definitions;
+package step_definitions.product;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import io.restassured.common.mapper.TypeRef;
 import org.assertj.core.api.Assertions;
 import pojo.response.products.Product;
+import step_definitions.BaseStep;
 import utils.APIUtils;
 import utils.TestDataWriter;
 
 import java.util.List;
 
-public class GetAllProductsSteps extends BaseStep{
+public class GetAllProductsSteps extends BaseStep {
 
     List<Product> products;
     @When("the user sends GET request to get all products endpoint")
