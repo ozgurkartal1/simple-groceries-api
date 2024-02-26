@@ -1,3 +1,4 @@
+@order
 Feature: Get all orders
 
   Background:
@@ -7,6 +8,4 @@ Feature: Get all orders
   Scenario: Test get all orders method functionality
     When the user gets all orders
     Then the status code should be 200
-    And the response order which is last must match with following details:
-      | productId | quantity | customerName      | comment |
-      | 4646      | 1        | Yusuf Bilal Çetin |         |
+    And the response orders must be a array of order

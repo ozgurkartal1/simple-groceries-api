@@ -39,11 +39,11 @@ public class RegisterANewClientSteps extends BaseStep {
         response = APIUtils.sendPostRequest(request, REGISTRATION_ENDPOINT, user);
     }
 
-    @When("the user sends POST request to a invalid endpoint with followint details:")
-    public void theUserSendsPOSTRequestToAInvalidEndpoint(DataTable dataTable) {
+    @When("the user sends POST request to a invalid endpoint as {string} with followint details:")
+    public void theUserSendsPOSTRequestToAInvalidEndpoint(String endpoint, DataTable dataTable) {
         Map<String, String> userMap = dataTable.asMap(String.class, String.class);
         user = new User(userMap.get("clientName"), userMap.get("clientEmail"));
-        response = APIUtils.sendPostRequest(request, REGISTRATION_ENDPOINT, user);
+        response = APIUtils.sendPostRequest(request, endpoint, user);
     }
 
 }
