@@ -3,6 +3,7 @@ package utils;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import pojo.request.order.update_order.UpdateOrder;
 
 import java.util.Map;
 
@@ -44,4 +45,15 @@ public class APIUtils {
                 .log().all()
                 .delete(endpoint);
     }
+
+    public static Response sendPatchRequest(RequestSpecification request, String endpoint, Object payload) {
+        return request
+                .contentType(ContentType.JSON)
+                .body(payload)
+                .when()
+                .log().all()
+                .patch(endpoint);
+    }
+
+
 }

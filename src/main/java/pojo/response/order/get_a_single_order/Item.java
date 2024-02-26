@@ -1,4 +1,4 @@
-package pojo.request.order.allorders;
+package pojo.response.order.get_a_single_order;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

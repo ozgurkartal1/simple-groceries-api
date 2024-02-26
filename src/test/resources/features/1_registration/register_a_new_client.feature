@@ -6,7 +6,7 @@ Feature: Register a new client
 
   Scenario: Test register method functionality with valid credentials
 
-    When the user sends POST request to registeration endpoint with valid "Ozgur" and "ozgurkartal45354351@gmail.com"
+    When the user sends POST request to registeration endpoint with valid "Ozgur" and "ozgurkartal12897@gmail.com"
     Then the status code should be 201
     And the access token can not be null or empty
 
@@ -16,8 +16,8 @@ Feature: Register a new client
     Then the status code should be 400
     And the error message "Invalid or missing client email." should be displayed
 
-  Scenario: Test register method fuctionality with invalid endpoint as "/api-client"
-    When the user sends POST request to a invalid endpoint with followint details:
+  Scenario: Test register method fuctionality with invalid endpoint"
+    When the user sends POST request to a invalid endpoint as "/api-client" with followint details:
       | clientName  | Özgür                    |
       | clientEmail | ozgurkartal515@gmail.com |
     Then the status code should be 404

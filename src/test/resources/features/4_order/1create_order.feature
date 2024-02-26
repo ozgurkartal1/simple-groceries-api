@@ -1,3 +1,4 @@
+@order
 Feature: Create order
 
   Background:
